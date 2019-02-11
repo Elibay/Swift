@@ -13,19 +13,28 @@ class ViewController: UIViewController {
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
-    var emojies = ["✌🏻", "🤙🏻", " 🤟🏻"]
     
+    @IBOutlet weak var countLabel: UILabel!
+    
+    let emojies = ["✌🏻", "🤙🏻", " 🤟🏻"]
+    var numberOfTaps = -3 {
+        didSet {
+            countLabel.text = "Number of taps: \(numberOfTaps)"
+        }
+    }
     @IBAction func buttonTouched(_ sender: UIButton) {
+        numberOfTaps += 1
         if sender.backgroundColor == UIColor.white {
-            if sender == button1 {
-                sender.setTitle(emojies[0], for: .normal)
-            }
-            else if sender == button2 {
-                sender.setTitle(emojies[1], for: .normal)
-            }
-            else {
-                sender.setTitle(emojies[2], for: .normal)
-            }
+            sender.setTitle(emojies[sender.tag], for: .normal)
+//            if sender == button1 {
+//                sender.setTitle(emojies[0], for: .normal)
+//            }
+//            else if sender == button2 {
+//                sender.setTitle(emojies[1], for: .normal)
+//            }
+//            else {
+//                sender.setTitle(emojies[2], for: .normal)
+//            }
             sender.backgroundColor = UIColor.red
         }
         else {
