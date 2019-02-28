@@ -131,8 +131,25 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="We6-98-5VO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <connections>
+                                                        <action selector="tagTapped:" destination="yz8-D6-GgX" eventType="touchUpInside" id="c2b-C9-EUa"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
                                         </view>
                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="We6-98-5VO" firstAttribute="leading" secondItem="QXL-YV-2O0" secondAttribute="leading" id="2si-Ju-9QI"/>
+                                            <constraint firstItem="We6-98-5VO" firstAttribute="top" secondItem="QXL-YV-2O0" secondAttribute="top" id="Nt9-Dm-RoS"/>
+                                            <constraint firstAttribute="trailing" secondItem="We6-98-5VO" secondAttribute="trailing" id="piR-RH-P9v"/>
+                                            <constraint firstAttribute="bottom" secondItem="We6-98-5VO" secondAttribute="bottom" id="z9P-KS-6zI"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="cellButton" destination="We6-98-5VO" id="loX-Vj-oqR"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

@@ -26,7 +26,7 @@ class ContactTableViewCell: UITableViewCell {
 
     func setContact(_ contact: Contact) {
         nameLabel.text = "\(contact.firstname) \(contact.lastname)"
-        
+        backgroundColor = contact.tag
         phoneLabel.text = contact.phone
     }
     

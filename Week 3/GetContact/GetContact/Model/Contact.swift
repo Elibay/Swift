@@ -7,23 +7,16 @@
 //
 
 import Foundation
-
-enum TagColor {
-    case red
-    case green
-    case blue
-    case yellow
-    case orange
-}
+import UIKit
 
 class Contact {
     
     var firstname: String
     var lastname: String
     var phone: String
-    var tag: TagColor
+    var tag: UIColor
     
-    init(firstname: String, lastname: String, phone: String, tag: TagColor) {
+    init(firstname: String, lastname: String, phone: String, tag: UIColor) {
         
         self.firstname = firstname
         self.lastname = lastname

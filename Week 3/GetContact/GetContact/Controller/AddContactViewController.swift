@@ -21,17 +21,22 @@ class AddContactViewController: UIViewController, UICollectionViewDataSource {
     @IBOutlet weak var firstnameField: UITextField!
     @IBOutlet weak var lastnameField: UITextField!
     @IBOutlet weak var phoneField: UITextField!
+    var tagSetting = UIColor.clear
     
     var delegate: AddContactDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         let addButton = UIBarButtonItem.init(title: "Add", style: .done, target: self, action: #selector(addTapped))
-        
         self.navigationItem.rightBarButtonItem = addButton
-        collectionView.dataSource = self
         
+        collectionView.dataSource = self
+    }
+    @IBAction func tagTapped(_ sender: Any) {
+        let button = sender as! UIButton
+        tagSetting = (button.backgroundColor ?? UIColor.clear)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -69,7 +74,7 @@ class AddContactViewController: UIViewController, UICollectionViewDataSource {
         }
         
         
-        let contact = Contact.init(firstname: firstnameField.text ?? "", lastname: lastnameField.text ?? "", phone: phoneField.text ?? "", tag: .red)
+        let contact = Contact.init(firstname: firstnameField.text ?? "", lastname: lastnameField.text ?? "", phone: phoneField.text ?? "", tag: tagSetting)
         
         delegate?.didCreateContact(contact: contact)
 
