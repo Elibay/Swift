@@ -75,7 +75,7 @@ class AddContactViewController: UIViewController, UICollectionViewDataSource {
         
         
         let contact = Contact.init(firstname: firstnameField.text ?? "", lastname: lastnameField.text ?? "", phone: phoneField.text ?? "", tag: tagSetting)
-        
+        Contact.saveOneContact(contact)
         delegate?.didCreateContact(contact: contact)
 
         self.navigationController?.popViewController(animated: true)

@@ -16,8 +16,9 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
     var contacts = [Contact]()
     
     override func viewDidLoad() {
+//        Contact.save([Contact(firstname: "Y", lastname: "123", phone: "123", tag: UIColor.red)])
+        contacts = Contact.get()
         super.viewDidLoad()
-
         let addButton = UIBarButtonItem.init(title: "Add", style: .done, target: self, action: #selector(addTapped))
         
         self.navigationItem.rightBarButtonItem = addButton        
