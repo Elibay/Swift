@@ -15,6 +15,7 @@
 		F5182995222D98EE004F502D /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5182994222D98EE004F502D /* Photo.swift */; };
 		F5182997222D99B0004F502D /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5182996222D99B0004F502D /* PhotoService.swift */; };
 		F518299B222DB18F004F502D /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F518299A222DB18F004F502D /* PhotoListViewController.swift */; };
+		F518299D223041F5004F502D /* PhotoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F518299C223041F5004F502D /* PhotoListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F5182994222D98EE004F502D /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		F5182996222D99B0004F502D /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
 		F518299A222DB18F004F502D /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
+		F518299C223041F5004F502D /* PhotoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		F510A8C7222C545600CAB6A6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F518299C223041F5004F502D /* PhotoListTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				F5182997222D99B0004F502D /* PhotoService.swift in Sources */,
 				F518299B222DB18F004F502D /* PhotoListViewController.swift in Sources */,
 				F5182995222D98EE004F502D /* Photo.swift in Sources */,
+				F518299D223041F5004F502D /* PhotoListTableViewCell.swift in Sources */,
 				F510A8B4222C53B900CAB6A6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

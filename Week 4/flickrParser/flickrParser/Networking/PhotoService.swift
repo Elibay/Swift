@@ -12,12 +12,12 @@ import SwiftyJSON
 
 class PhotoService {
     static func getPhotos(success: @escaping ([Photo]) -> Void, failure: @escaping (Error) -> Void) {
-        let url = URL.init(string: "https://www.flickr.com/services/api/render?method=flickr.photos.getRecent&api_key=93ba2a13e201e37687788d9909f85b72&format=json&nojsoncallback=1&api_sig=8ac88b93b67f14c6d8a37cad501bdf7c")
+        let url = URL.init(string: "https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=9f342dc0b2edfea383debb95782fd39e&format=json&nojsoncallback=1&api_sig=73f8da583d6907820e9c8b7ac30373c2")
         Alamofire.request(url!, parameters: nil, headers: nil).responseJSON {
             response in
             switch response.result {
             case .success(let val):
-                let photos = JSON(val)["photos"].arrayValue
+                let photos = JSON(val)["photos"]["photo"].arrayValue
                 var res = [Photo]()
                 for json in photos {
                     res.append(Photo.init(json: json))

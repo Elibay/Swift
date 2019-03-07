@@ -7,26 +7,44 @@
 //
 
 import UIKit
+import SVProgressHUD
+
 
 class PhotoListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    var photos = [Photo]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print ("Hello")
+        loadPhotos()
         
         tableView.dataSource = self
         tableView.delegate = self
         // Do any additional setup after loading the view.
     }
     
+    func loadPhotos() {
+        SVProgressHUD.show()
+        PhotoService.getPhotos(success: { (photos) in
+            SVProgressHUD.dismiss()
+            self.photos = photos
+            self.tableView.reloadData()
+        }) { (error) in
+            SVProgressHUD.dismiss()
+            
+        }
+        
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return photos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoListTableViewCell", for: indexPath) as! PhotoListTableViewCell
+        cell.setValue(photos[indexPath.row])
+        return cell
     }
     
     /*

@@ -10,14 +10,20 @@ import Foundation
 import SwiftyJSON
 
 class Photo {
-    var username: String
-    var description: String
-    var date: String
+    var owner: String
+    var title: String
+//    var secret: String
+//    var server: String
+//    var farm: String
+    var id: String
     var url: String
     init(json: JSON) {
-        username = json["username"].stringValue
-        description = json["description"].stringValue
-        date = json["date"].stringValue
-        url = json["url"].stringValue
+        owner = json["owner"].stringValue
+        title = json["title"].stringValue
+        let secret = json["secret"].stringValue
+        let server = json["secret"].stringValue
+        let farm = json["secret"].stringValue
+        id = json["id"].stringValue
+        url = "http://farm\(farm).staticflickr.com/\(server)/\(id)_\(secret).jpg"
     }
 }
