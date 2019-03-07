@@ -30,7 +30,6 @@ class PhotoService {
         }
     }
     static func getPhotoInfo(_ photoId:String, success: @escaping (PhotoInfo) -> Void, failure: @escaping (Error) -> Void) {
-        print(photoId)
         let url = URL.init(string: "https://api.flickr.com/services/rest/")
         var prms = Parameters()
         prms["method"] = "flickr.photos.getInfo"
