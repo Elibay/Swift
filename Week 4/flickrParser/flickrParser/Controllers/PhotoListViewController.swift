@@ -32,13 +32,22 @@ class PhotoListViewController: UIViewController, UITableViewDataSource, UITableV
             self.tableView.reloadData()
         }) { (error) in
             SVProgressHUD.dismiss()
-            
         }
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return photos.count
+        return min (photos.count, 10)
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 255
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "PhotoViewController") as! PhotoViewController
+        controller.photoID = photos[indexPath.row].id
+        controller.photoUrl = photos[indexPath.row].url
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -8,5 +8,6 @@ target 'flickrParser' do
   pod 'SwiftyJSON'
   pod 'SDWebImage'
   pod 'SVProgressHUD'
+  pod 'AlamofireImage'
   # Pods for flickrParser
 end
