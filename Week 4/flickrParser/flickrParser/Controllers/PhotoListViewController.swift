@@ -55,7 +55,6 @@ class PhotoListViewController: UIViewController, UITableViewDataSource, UITableV
         cell.setValue(photos[indexPath.row])
         return cell
     }
-    
     /*
     // MARK: - Navigation
 

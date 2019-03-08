@@ -18,6 +18,8 @@
 		F518299D223041F5004F502D /* PhotoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F518299C223041F5004F502D /* PhotoListTableViewCell.swift */; };
 		F518299F223125A9004F502D /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F518299E223125A9004F502D /* ImageDownloader.swift */; };
 		F51829A122312985004F502D /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51829A022312985004F502D /* PhotoViewController.swift */; };
+		F5E7AE3122328EEC00E6CB46 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E7AE3022328EEC00E6CB46 /* PhotoCollectionViewCell.swift */; };
+		F5E7AE332232906500E6CB46 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E7AE322232906500E6CB46 /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		F518299C223041F5004F502D /* PhotoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListTableViewCell.swift; sourceTree = "<group>"; };
 		F518299E223125A9004F502D /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		F51829A022312985004F502D /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		F5E7AE3022328EEC00E6CB46 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		F5E7AE322232906500E6CB46 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 			children = (
 				F518299A222DB18F004F502D /* PhotoListViewController.swift */,
 				F51829A022312985004F502D /* PhotoViewController.swift */,
+				F5E7AE322232906500E6CB46 /* ListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				F518299C223041F5004F502D /* PhotoListTableViewCell.swift */,
+				F5E7AE3022328EEC00E6CB46 /* PhotoCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -268,8 +274,10 @@
 				F5182995222D98EE004F502D /* Photo.swift in Sources */,
 				F518299D223041F5004F502D /* PhotoListTableViewCell.swift in Sources */,
 				F51829A122312985004F502D /* PhotoViewController.swift in Sources */,
+				F5E7AE3122328EEC00E6CB46 /* PhotoCollectionViewCell.swift in Sources */,
 				F518299F223125A9004F502D /* ImageDownloader.swift in Sources */,
 				F510A8B4222C53B900CAB6A6 /* AppDelegate.swift in Sources */,
+				F5E7AE332232906500E6CB46 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
