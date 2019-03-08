@@ -15,6 +15,7 @@
 		F5D6AC302215AB820072F4E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D6AC2F2215AB820072F4E2 /* Assets.xcassets */; };
 		F5D6AC332215AB820072F4E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D6AC312215AB820072F4E2 /* LaunchScreen.storyboard */; };
 		F5D6AC3E2215ABDC0072F4E2 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D6AC3D2215ABDC0072F4E2 /* Question.swift */; };
+		F5E7AE2D22316A2C00E6CB46 /* CongratsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E7AE2C22316A2C00E6CB46 /* CongratsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		F5D6AC322215AB820072F4E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5D6AC342215AB820072F4E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5D6AC3D2215ABDC0072F4E2 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		F5E7AE2C22316A2C00E6CB46 /* CongratsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				F51275BE2219CF06001A489D /* QuizViewController.swift */,
+				F5E7AE2C22316A2C00E6CB46 /* CongratsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				F5D6AC3E2215ABDC0072F4E2 /* Question.swift in Sources */,
 				F51275BF2219CF06001A489D /* QuizViewController.swift in Sources */,
 				F51275BB2219CBFA001A489D /* QuestionGenerator.swift in Sources */,
+				F5E7AE2D22316A2C00E6CB46 /* CongratsViewController.swift in Sources */,
 				F51275BD2219CE3E001A489D /* QuizManager.swift in Sources */,
 				F5D6AC292215AB810072F4E2 /* AppDelegate.swift in Sources */,
 			);

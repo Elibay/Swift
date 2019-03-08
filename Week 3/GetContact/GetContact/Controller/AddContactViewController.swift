@@ -17,6 +17,8 @@ class AddContactViewController: UIViewController, UICollectionViewDataSource {
     
     
 
+    @IBOutlet weak var checkCell: UIImageView!
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var firstnameField: UITextField!
     @IBOutlet weak var lastnameField: UITextField!
@@ -37,15 +39,33 @@ class AddContactViewController: UIViewController, UICollectionViewDataSource {
     @IBAction func tagTapped(_ sender: Any) {
         let button = sender as! UIButton
         tagSetting = (button.backgroundColor ?? UIColor.clear)
+//        checkCell.isHidden = false
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! TagCollectionViewCell
+        cell.checkCell.isHidden = false
+        print("i am here")
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! TagCollectionViewCell
+        cell.checkCell.isHidden = false
+        print("i am her")
+    }
+
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TagCollectionViewCell", for: indexPath) as! TagCollectionViewCell
         cell.setTag(indexPath.row)
+        cell.layer.cornerRadius = min(cell.frame.size.height, cell.frame.size.width) / 2.0
+        
+        cell.layer.masksToBounds = true
+        cell.checkCell.isHidden = true
         return cell
         
     }

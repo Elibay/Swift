@@ -13,7 +13,21 @@ class QuizManager {
     var currentIndex = 0
     var score = 0
     
+    func increaseScore() {
+        score += 10
+    }
     func getCurrentQuestion() -> Question {
         return questions[currentIndex]
+    }
+    
+    func nextQuestion() {
+        currentIndex += 1
+    }
+    
+    func isFinished() -> Bool {
+        if currentIndex == questions.count - 1 {
+            return true
+        }
+        return false
     }
 }

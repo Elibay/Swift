@@ -21,14 +21,34 @@ class QuizViewController: UIViewController {
     
     @IBOutlet weak var textLabel: UILabel!
     var manager = QuizManager()
+    var isTapped = false
     
     @IBAction func questionButtonTapped(_ sender: UIButton) {
         let tag = sender.tag
-        let question = manager.getCurrentQuestion()
-        if tag == question.answer {
-            sender.backgroundColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.4431372549, alpha: 1)
-        } else {
-            sender.backgroundColor = #colorLiteral(red: 0.9058823529, green: 0.2980392157, blue: 0.2352941176, alpha: 1)
+        if isTapped == false {
+            let question = manager.getCurrentQuestion()
+            if tag == question.answer {
+                manager.increaseScore()
+                sender.backgroundColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.4431372549, alpha: 1)
+            } else {
+                sender.backgroundColor = #colorLiteral(red: 0.9058823529, green: 0.2980392157, blue: 0.2352941176, alpha: 1)
+            }
+        }
+        
+        isTapped = true
+    }
+    @objc
+    func nextQuestion() {
+        if manager.isFinished() {
+            let controller = storyboard?.instantiateViewController(withIdentifier: "CongratsViewController") as! CongratsViewController
+//            controller.delegate = self
+            
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+        else if isTapped == true {
+            isTapped = false
+            manager.nextQuestion()
+            show()
         }
     }
     func show() -> Void {
@@ -38,10 +58,19 @@ class QuizViewController: UIViewController {
         secondButton.setTitle(question.varinats[1], for: .normal)
         thirdButton.setTitle(question.varinats[2], for: .normal)
         fourthButton.setTitle(question.varinats[3], for: .normal)
+        
+        firstButton.backgroundColor = UIColor.white
+        secondButton.backgroundColor = UIColor.white
+        thirdButton.backgroundColor = UIColor.white
+        fourthButton.backgroundColor = UIColor.white
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         show()
+        let addButton = UIBarButtonItem.init(title: "NextQuestion", style: .done, target: self, action: #selector(nextQuestion))
+        self.navigationItem.rightBarButtonItem = addButton
+//        self.navigationItem.leftBarButtonItem = self.editButtonItem
+
         
     }
     
