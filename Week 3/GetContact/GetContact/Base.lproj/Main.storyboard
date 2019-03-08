@@ -132,12 +132,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="We6-98-5VO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                    <connections>
-                                                        <action selector="tagTapped:" destination="yz8-D6-GgX" eventType="touchUpInside" id="c2b-C9-EUa"/>
-                                                    </connections>
-                                                </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-check" translatesAutoresizingMaskIntoConstraints="NO" id="YhI-kl-BiJ">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 </imageView>
@@ -145,17 +139,12 @@
                                         </view>
                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="We6-98-5VO" firstAttribute="leading" secondItem="QXL-YV-2O0" secondAttribute="leading" id="2si-Ju-9QI"/>
-                                            <constraint firstItem="YhI-kl-BiJ" firstAttribute="centerY" secondItem="We6-98-5VO" secondAttribute="centerY" id="NKA-qE-NZe"/>
-                                            <constraint firstItem="We6-98-5VO" firstAttribute="top" secondItem="QXL-YV-2O0" secondAttribute="top" id="Nt9-Dm-RoS"/>
-                                            <constraint firstItem="YhI-kl-BiJ" firstAttribute="height" secondItem="We6-98-5VO" secondAttribute="height" id="gil-X8-Otb"/>
-                                            <constraint firstItem="YhI-kl-BiJ" firstAttribute="centerX" secondItem="We6-98-5VO" secondAttribute="centerX" id="hme-PR-A4m"/>
-                                            <constraint firstAttribute="trailing" secondItem="We6-98-5VO" secondAttribute="trailing" id="piR-RH-P9v"/>
-                                            <constraint firstItem="YhI-kl-BiJ" firstAttribute="width" secondItem="We6-98-5VO" secondAttribute="width" id="yyo-OR-Jfa"/>
-                                            <constraint firstAttribute="bottom" secondItem="We6-98-5VO" secondAttribute="bottom" id="z9P-KS-6zI"/>
+                                            <constraint firstItem="YhI-kl-BiJ" firstAttribute="width" secondItem="QXL-YV-2O0" secondAttribute="width" id="EGe-kN-Xyk"/>
+                                            <constraint firstItem="YhI-kl-BiJ" firstAttribute="centerY" secondItem="QXL-YV-2O0" secondAttribute="centerY" id="Mrb-VY-dJY"/>
+                                            <constraint firstItem="YhI-kl-BiJ" firstAttribute="centerX" secondItem="QXL-YV-2O0" secondAttribute="centerX" id="gfb-up-Iko"/>
+                                            <constraint firstItem="YhI-kl-BiJ" firstAttribute="height" secondItem="QXL-YV-2O0" secondAttribute="height" id="pYH-6E-Sjd"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="cellButton" destination="We6-98-5VO" id="loX-Vj-oqR"/>
                                             <outlet property="checkCell" destination="YhI-kl-BiJ" id="vUd-6n-dka"/>
                                         </connections>
                                     </collectionViewCell>

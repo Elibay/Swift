@@ -7,9 +7,11 @@
 //
 
 import UIKit
-let colors = [UIColor.green, UIColor.black, UIColor.red, UIColor.yellow]
+var colors = [UIColor.green, UIColor.black, UIColor.red, UIColor.yellow, UIColor.blue,
+              UIColor.brown, UIColor.cyan, UIColor.darkGray, UIColor.gray, UIColor.orange,
+              UIColor.purple]
+
 class TagCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var cellButton: UIButton!
     
     @IBOutlet weak var checkCell: UIImageView!
     override func awakeFromNib() {
@@ -30,8 +32,6 @@ class TagCollectionViewCell: UICollectionViewCell {
     }
     
     func setTag(_ index: Int) {
-        
-        cellButton.backgroundColor = colors[index % 4]
-        backgroundColor = colors[index % 4]
+        backgroundColor = colors[index % 11]
     }
 }
