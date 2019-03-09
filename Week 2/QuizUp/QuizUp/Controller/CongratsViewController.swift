@@ -10,21 +10,27 @@ import UIKit
 
 class CongratsViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    
+    
+    @IBAction func replayAction(_ sender: UIButton) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "QuizViewController") as! QuizViewController
+        self.present(controller, animated: false, completion: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func viewScore(_ sender: UIButton) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "RaitingViewController") as! RaitingViewController
+//        self.present(controller, animated: true, completion: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
-    */
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        scoreLabel.text = "You have scored: \(Statics.user.lastScore) points"
+    }
+    
 
 }
